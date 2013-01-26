@@ -5,7 +5,11 @@
 "   git submodule init
 " To update all submodules:
 "   git submodule update --init
-execute pathogen#infect()
+"execute pathogen#infect()
+
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 map <C-n> :NERDTreeToggle<CR>
 "autocmd vimenter * NERDTree
 runtime! plugin/sensible.vim
